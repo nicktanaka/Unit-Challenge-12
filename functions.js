@@ -66,6 +66,12 @@ function displayAreaCode(inputId, outputId) {
 
     document.getElementById(outputId).innerHTML = outputText;
 }
+/**
+* Returns a CO code from a phone number: (###) ###-####
+* @param   {string} phoneNum The phone number
+* @returns {string} The area code
+* @throws {Error} If the format is incorrect
+*/
 function getCOCode(phoneNum) {
     var COCode;
 
@@ -80,7 +86,11 @@ function getCOCode(phoneNum) {
         throw new Error("Invalid phone number: " + error.message);
     }
 }
-
+/**
+* Displays the CO code from an inputted phone number
+* @param {string} inputId  The element id for the text box
+* @param {string} outputId The element id of message div
+*/
 function displayCOCode(inputId, outputId) {
     var outputText = "";
     var phoneNum = document.getElementById(inputId).value;
