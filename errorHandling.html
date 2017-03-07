@@ -10,10 +10,12 @@
 </head>
 <body>
     <p>Please enter your Phone Number:</p>
-    <input type="text" id="phone">
+    <input type="text" id="inputId">
     <p/>
-   <input type="button" onclick="displayCOCode('phone', 'output')" value="Validate.">
+   <input type="button" onclick="displayAreaCode('inputId', 'output1'), displayCOCode('inputId', 'output2'), displayLineCode('inputId', 'output3')" value="Validate.">
    <p/>
-   <div id="output"></div>
-</body>
+   <div id="output1"></div>
+   <div id="output2"></div>
+   <div id="output3"></div>
+    </body>
 </html>
