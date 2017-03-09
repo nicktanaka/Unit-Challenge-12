@@ -139,8 +139,5 @@ function displayLineCode(inputId, outputId) {
     document.getElementById(outputId).innerHTML = outputText;
 }
 
-function displayAllCodes(InputId, OutputId) {
-    displayCOCode(InputId, OutputId);
-    displayLineCode(InputId, OutputId);
-    displayArea(InputId, OutputId);
-}
+
+
