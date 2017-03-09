@@ -69,19 +69,11 @@ function getCOCode(phoneNum) {
     var COCode;
     try {
         COcode = between(phoneNum, ")", "-");
-<<<<<<< HEAD
-        if (COcode.length == 4 && Number(COcode)) {
-            return COcode;
-        }
-        else {
-            throw new Error("Invalid CO code: " + COcode);
-        }
-=======
     if (COcode.length == 3 && Number(COcode)) {
         return COcode;
     } else {
         throw new Error("Invalid CO code: " + COcode);
->>>>>>> origin/master
+        }
     }
     catch (error) {
         throw new Error("Invalid phone number: " + error.message);
