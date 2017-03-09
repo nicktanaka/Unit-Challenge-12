@@ -61,7 +61,7 @@ function displayAreaCode(inputId, outputId) {
         outputText = "Your area code is " + areaCode;
     } catch (error) {
         console.log(error.message);
-        outputText = error.message;
+        outputText = "ERROR Please check formatting. Phone numbers should be typed in the form (xxx)xxx-xxxx";
     }
 
     document.getElementById(outputId).innerHTML = outputText;
@@ -103,7 +103,7 @@ function displayCOCode(inputId, outputId) {
         outputText = "Your CO code is " + COCode;
     } catch (error) {
         console.log(error.message);
-        outputText = error.message;
+        outputText = "ERROR Please check formatting. Phone numbers should be typed in the form (xxx)xxx-xxxx";
     }
 
     document.getElementById(outputId).innerHTML = outputText;
@@ -145,7 +145,7 @@ function displayLineCode(inputId, outputId) {
         outputText = "Your line code is " + lineCode;
     } catch (error) {
         console.log(error.message);
-        outputText = error.message;
+        outputText = "ERROR Please check formatting. Phone numbers should be typed in the form (xxx)xxx-xxxx";
     }
 
     document.getElementById(outputId).innerHTML = outputText;
