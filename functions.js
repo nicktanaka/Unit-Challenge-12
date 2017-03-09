@@ -139,7 +139,4 @@ function displayLineCode(inputId, outputId) {
     }
     document.getElementById(outputId).innerHTML = outputText;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
