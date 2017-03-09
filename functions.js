@@ -69,10 +69,11 @@ function getCOCode(phoneNum) {
     var COCode;
     try {
         COcode = between(phoneNum, ")", "-");
-    if (COcode.length == 3 && Number(COcode)) {
-        return COcode;
-    } else {
-        throw new Error("Invalid CO code: " + COcode);
+        if (COcode.length == 3 && Number(COcode)) {
+            return COcode;
+        }
+        else {
+            throw new Error("Invalid CO code: " + COcode);
         }
     }
     catch (error) {
@@ -138,11 +139,10 @@ function displayLineCode(inputId, outputId) {
     }
     document.getElementById(outputId).innerHTML = outputText;
 }
-
-   /**
-    * Display all functions
-    *param {string} display all functions
-    */
+/**
+ * Display all functions
+ *param {string} display all functions
+ */
 function displayAllCodes(InputId, OutputId) {
     displayCOCode(InputId, OutputId);
     displayLineCode(InputId, OutputId);
