@@ -78,7 +78,7 @@ function getCOCode(phoneNum) {
 
     try {
         COcode = between(phoneNum, ")", "-");
-    if (COcode.length == 4 && Number(COcode)) {
+    if (COcode.length == 3 && Number(COcode)) {
         return COcode;
     } else {
         throw new Error("Invalid CO code: " + COcode);
@@ -119,7 +119,7 @@ function getLineCode(phoneNum) {
     var lineCode;
 
     try {
-        lineCode = phoneNum.slice(10, 15);
+        lineCode = phoneNum.slice(9, 14);
         if (lineCode.length == 4 && Number(lineCode)) {
             return lineCode;
         } else {
