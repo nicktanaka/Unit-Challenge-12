@@ -139,12 +139,4 @@ function displayLineCode(inputId, outputId) {
     }
     document.getElementById(outputId).innerHTML = outputText;
 }
-/**
- * Display all functions
- *param {string} display all functions
- */
-function displayAllCodes(InputId, OutputId) {
-    displayCOCode(InputId, OutputId);
-    displayLineCode(InputId, OutputId);
-    displayArea(InputId, OutputId);
-}
+
