@@ -55,7 +55,7 @@ function displayAreaCode(inputId, outputId) {
     }
     catch (error) {
         console.log(error.message);
-        outputText = error.message;
+        outputText = "ERROR Please check formatting. Phone numbers should be typed in the form (xxx)xxx-xxxx";
     }
     document.getElementById(outputId).innerHTML = outputText;
 }
@@ -69,12 +69,19 @@ function getCOCode(phoneNum) {
     var COCode;
     try {
         COcode = between(phoneNum, ")", "-");
+<<<<<<< HEAD
         if (COcode.length == 4 && Number(COcode)) {
             return COcode;
         }
         else {
             throw new Error("Invalid CO code: " + COcode);
         }
+=======
+    if (COcode.length == 3 && Number(COcode)) {
+        return COcode;
+    } else {
+        throw new Error("Invalid CO code: " + COcode);
+>>>>>>> origin/master
     }
     catch (error) {
         throw new Error("Invalid phone number: " + error.message);
@@ -95,7 +102,7 @@ function displayCOCode(inputId, outputId) {
     }
     catch (error) {
         console.log(error.message);
-        outputText = error.message;
+        outputText = "ERROR Please check formatting. Phone numbers should be typed in the form (xxx)xxx-xxxx";
     }
     document.getElementById(outputId).innerHTML = outputText;
 }
@@ -108,7 +115,7 @@ function displayCOCode(inputId, outputId) {
 function getLineCode(phoneNum) {
     var lineCode;
     try {
-        lineCode = phoneNum.slice(10, 15);
+        lineCode = phoneNum.slice(9, 14);
         if (lineCode.length == 4 && Number(lineCode)) {
             return lineCode;
         }
@@ -135,7 +142,7 @@ function displayLineCode(inputId, outputId) {
     }
     catch (error) {
         console.log(error.message);
-        outputText = error.message;
+        outputText = "ERROR Please check formatting. Phone numbers should be typed in the form (xxx)xxx-xxxx";
     }
     document.getElementById(outputId).innerHTML = outputText;
 }
